@@ -54,3 +54,11 @@ services:
             - "8001:80"
         restart: unless-stopped
 #
+
+# # # # # # # # Start
+# ```bash: sudo cp -r ./build ./running && sudo docker-compose up```
+# ```shell: Copy-Item -Path "./build" -Destination "./running" -Recurse; docker-compose up```
+# # # # # # # # Restart
+# ```bash: sudo docker-compose down && sudo rm -r ./running && sudo cp -r ./build ./running && sudo docker-compose up```
+# ```shell: docker-compose down; rm "./running" -Recurse; Copy-Item -Path "./build" -Destination "./running" -Recurse; docker-compose up```
+#
