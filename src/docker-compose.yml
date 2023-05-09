@@ -55,11 +55,6 @@ services:
     phpmyadmin:
         container_name: dbms-phpmyadmin
         image: phpmyadmin:latest
-        #environment:
-            #PMA_HOST: mariadb                          #` Имя хоста БД. Если соответствующий service называется db, то указывать не нужно
-            #PMA_USER: example_user                     #` (*в целях безопасности использовать только локально*) Данные для автоматической аутентификации PhpMyAdmin
-            #PMA_PASSWORD: example_password             #` (*в целях безопасности использовать только локально*) Данные для автоматической аутентификации PhpMyAdmin
-            #MYSQL_ROOT_PASSWORD: example_root_password #` Пароль root пользователя для PhpMyAdmin для выполнения административных операций в базе данных
         # env_file: .env #` gitignore
         # env_file: .env-example
         ports:
