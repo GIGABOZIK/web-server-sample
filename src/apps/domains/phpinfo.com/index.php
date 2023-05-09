@@ -8,10 +8,11 @@ echo date("d/m/Y - H:i:s");
 echo '<br><br><h1>Проверка подключения к БД</h1><br>';
 $config = [
     'host' => 'db', #` Имя контейнера хост-БД
-    'dbname' => 'example_database', #` Имя целевой БД (мы ее указали в docker-compose)
-    'user' => 'example_user', # example_user | root
-    'password' => 'example_password', # example_password | example_root_password
+    'dbname' => getenv('MYSQL_DATABASE'), #` Имя целевой БД
+    'user' => getenv('MYSQL_USER'),
+    'password' => getenv('MYSQL_PASSWORD'),
 ];
+
 $pdo = new PDO('mysql:'
     . 'host=' . $config['host'] #. ';port=' . '3306'
     . ';dbname=' . $config['dbname']

@@ -28,6 +28,8 @@ services:
         volumes:
             #` DOMAINS
             - ./apps/domains:/var/www
+        # env_file: .env #` * gitignore
+        env_file: .env-example
         depends_on:
             - db
         restart: unless-stopped
@@ -44,9 +46,8 @@ services:
             - --character-set-server=utf8mb4
             - --collation-server=utf8mb4_unicode_ci
             - --skip-character-set-client-handshake
-        env_file:
-            - ./build/env/example_db.env #` *
-            # - ./build/env/db.env #` * gitignore
+        # env_file: .env #` * gitignore
+        env_file: .env-example
         ports:
             - "3306:3306" #` Можно открыть порт БД для подключения через иные СУБД (рекомендуется)
         restart: unless-stopped
@@ -59,6 +60,8 @@ services:
             #PMA_USER: example_user                     #` (*в целях безопасности использовать только локально*) Данные для автоматической аутентификации PhpMyAdmin
             #PMA_PASSWORD: example_password             #` (*в целях безопасности использовать только локально*) Данные для автоматической аутентификации PhpMyAdmin
             #MYSQL_ROOT_PASSWORD: example_root_password #` Пароль root пользователя для PhpMyAdmin для выполнения административных операций в базе данных
+        # env_file: .env #` gitignore
+        # env_file: .env-example
         ports:
             - "8001:80"
         restart: unless-stopped
