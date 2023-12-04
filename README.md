@@ -1,6 +1,6 @@
-# [LNMP-server-sample](https://github.com/GIGABOZIK/LNMP-server-sample) 
+# [web-server-sample](https://github.com/GIGABOZIK/web-server-sample) 
 **Описание репозитория:**
-Развертывание веб-приложения на стеке LNMP с помощью docker-compose.
+Развертывание веб-сервера с помощью docker-compose.
 
 Полезные возможности:
 * Быстрая настройка и развертывание - достаточно просто поменять нужный конфиг и перезапустить docker-compose
